@@ -522,6 +522,7 @@ class Label(PrimaryAPIObject):
     id = SimpleField()
     name = SimpleField()
     profile = SimpleField()
+    catno = SimpleField()
     urls = SimpleField()
     images = SimpleField()
     contact_info = SimpleField()
