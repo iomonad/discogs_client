@@ -17,6 +17,13 @@ class ModelsTestCase(DiscogsClientTestCase):
         r = self.d.release(1)
         self.assertEqual(r.title, 'Stockholm')
 
+    def test_labels(self):
+        """Labels can be fetched and parsed"""
+        r = self.d.release(1)
+        l = r.labels[0]
+        self.assertEqual(l.name, "Svek")
+        self.assertEqual(l.catno, "SK032")
+
     def test_master(self):
         """Masters can be fetched and parsed"""
         m = self.d.master(4242)
